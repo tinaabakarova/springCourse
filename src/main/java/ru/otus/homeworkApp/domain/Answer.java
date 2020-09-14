@@ -24,7 +24,7 @@ public class Answer {
 
     @Override
     public String toString() {
-        return "'" + answer + '\'';
+        return answer ;
     }
 
     @Override
