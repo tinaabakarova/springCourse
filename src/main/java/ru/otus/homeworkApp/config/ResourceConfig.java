@@ -5,22 +5,22 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.io.Resource;
-import ru.otus.homeworkApp.dao.QuestionDao;
-import ru.otus.homeworkApp.dao.QuestionDaoImpl;
-import ru.otus.homeworkApp.service.ResourceService;
+import ru.otus.homeworkApp.dao.ResourceDao;
+import ru.otus.homeworkApp.dao.ResourceDaoCsv;
 
 @PropertySource("application.properties")
 @Configuration
-public class DaoConfig {
+public class ResourceConfig {
     @Value("${questions}")
-    Resource questions;
+    private Resource questionsResource;
     @Value("${answers}")
-    Resource answers;
+    private Resource answersResource;
     @Value("${rightAnswers}")
-    Resource rightAnswers;
+    private Resource rightAnswerResource;
 
     @Bean
-    public QuestionDao questionDao(ResourceService resourceService) {
-        return new QuestionDaoImpl(questions, answers, rightAnswers, resourceService);
+    public ResourceDao resourceDao() {
+        return new ResourceDaoCsv(questionsResource, answersResource, rightAnswerResource);
     }
+
 }

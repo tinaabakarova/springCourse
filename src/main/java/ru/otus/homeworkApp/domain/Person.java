@@ -1,5 +1,8 @@
 package ru.otus.homeworkApp.domain;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class Person {
     private String name;
     private String lastName;

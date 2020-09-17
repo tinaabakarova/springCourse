@@ -19,9 +19,6 @@ public class Main {
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(Main.class);
         QuestionService questionService = context.getBean(QuestionService.class);
-        PersonService personService = context.getBean(PersonService.class);
-        personService.askPersonCredentials();
-        personService.greeting();
         questionService.testUserAndPrintResult();
     }
 }

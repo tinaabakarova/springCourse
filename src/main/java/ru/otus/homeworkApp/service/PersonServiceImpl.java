@@ -1,9 +1,11 @@
 package ru.otus.homeworkApp.service;
 
+import org.springframework.stereotype.Service;
 import ru.otus.homeworkApp.domain.Person;
 
 import java.util.Scanner;
 
+@Service
 public class PersonServiceImpl implements PersonService{
     private Person person;
 
