@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface QuestionService {
     public List<Question> getAllQuestionsWithAnswers();
+
+    public void testUserAndPrintResult();
 }
