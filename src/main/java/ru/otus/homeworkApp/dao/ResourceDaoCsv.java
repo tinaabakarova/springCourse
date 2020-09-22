@@ -2,22 +2,17 @@ package ru.otus.homeworkApp.dao;
 
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.io.Resource;
-import org.springframework.stereotype.Service;
 
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 
 public class ResourceDaoCsv implements ResourceDao {
-    private Resource questionsResource;
-    private Resource answersResource;
-    private Resource rightAnswerResource;
+    private final Resource questionsResource;
+    private final Resource answersResource;
+    private final Resource rightAnswerResource;
 
     public ResourceDaoCsv(Resource questionsResource, Resource answersResource, Resource rightAnswerResource) {
         this.questionsResource = questionsResource;
