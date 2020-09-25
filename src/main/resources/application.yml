@@ -1,0 +1,17 @@
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS
+
+  profiles:
+    active: RU
+
+application:
+  answersCountToPass: 3
+  questions: classpath:/resourceFiles/questions.csv
+  answers: classpath:/resourceFiles/answers.csv
+  rightAnswers: classpath:/resourceFiles/rightAnswers.csv
+  questions_RU: classpath:/resourceFiles/questions_RU.csv
+  answers_RU: classpath:/resourceFiles/answers_RU.csv
+  rightAnswers_RU: classpath:/resourceFiles/rightAnswers_RU.csv
+  locale: RU

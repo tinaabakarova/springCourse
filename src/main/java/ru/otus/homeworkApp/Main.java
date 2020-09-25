@@ -1,23 +1,17 @@
 package ru.otus.homeworkApp;
 
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-import ru.otus.homeworkApp.domain.Person;
-import ru.otus.homeworkApp.domain.Question;
-import ru.otus.homeworkApp.service.PersonService;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.ConfigurableApplicationContext;
+import ru.otus.homeworkApp.config.ApplicationPropertiesConfig;
 import ru.otus.homeworkApp.service.QuestionService;
-import ru.otus.utils.PropertyLoader;
 
-import java.util.List;
-
-@Configuration
-@ComponentScan
+@SpringBootApplication
+@EnableConfigurationProperties(ApplicationPropertiesConfig.class)
 public class Main {
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext context =
-                new AnnotationConfigApplicationContext(Main.class);
+        ConfigurableApplicationContext context = SpringApplication.run(Main.class, args);
         QuestionService questionService = context.getBean(QuestionService.class);
         questionService.testUserAndPrintResult();
     }

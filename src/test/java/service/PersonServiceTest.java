@@ -1,6 +1,7 @@
 package service;
 
 import org.junit.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
 import ru.otus.homeworkApp.dao.ResourceDao;
@@ -10,8 +11,8 @@ import utils.PropertyLoader;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
+@SpringBootTest
 public class PersonServiceTest {
     Resource questions;
     Resource answers;

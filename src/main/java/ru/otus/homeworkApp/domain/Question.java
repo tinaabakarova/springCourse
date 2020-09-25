@@ -26,8 +26,7 @@ public class Question {
     @Override
     public String toString() {
         return
-                "question: " + question + "\n" +
-                "answers: " + answers;
+                question + "\n" + answers;
     }
 
     @Override

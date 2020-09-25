@@ -1,11 +1,9 @@
 package ru.otus.homeworkApp.service;
 
 import org.springframework.stereotype.Service;
-import org.w3c.dom.ls.LSOutput;
+import ru.otus.homeworkApp.config.ApplicationPropertiesConfig;
 import ru.otus.homeworkApp.dao.QuestionDao;
-import ru.otus.homeworkApp.domain.Answer;
 import ru.otus.homeworkApp.domain.Question;
-import ru.otus.utils.PropertyLoader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,10 +14,12 @@ public class QuestionServiceImpl implements QuestionService{
 
     private final QuestionDao dao;
     private final PersonService personService;
+    private final ApplicationPropertiesConfig applicationProperties;
 
-    public QuestionServiceImpl(QuestionDao dao, PersonService personService) {
+    public QuestionServiceImpl(QuestionDao dao, PersonService personService, ApplicationPropertiesConfig applicationProperties) {
         this.dao = dao;
         this.personService = personService;
+        this.applicationProperties = applicationProperties;
     }
 
     @Override
@@ -29,7 +29,8 @@ public class QuestionServiceImpl implements QuestionService{
 
     @Override
     public void testUserAndPrintResult(){
-        System.out.println("Let's do some tests!");
+        System.out.println(applicationProperties.getMessageSource().getMessage("startMessage",
+                new String[]{}, applicationProperties.getLocale()));
         personService.askPersonCredentials();
         personService.greeting();
         Scanner scanner = new Scanner(System.in);
@@ -45,16 +46,18 @@ public class QuestionServiceImpl implements QuestionService{
         });
 
         if (isOffset(results)) {
-            System.out.println("You pass!");
+            System.out.println(applicationProperties.getMessageSource().getMessage("pass",
+                    new String[]{}, applicationProperties.getLocale()));
         } else {
-            System.out.println("You fail!");
+            System.out.println(applicationProperties.getMessageSource().getMessage("fail",
+                    new String[]{}, applicationProperties.getLocale()));
         }
 
     }
 
     private boolean isOffset(List<Boolean> results){
        long count = results.stream().filter(res -> res.equals(true)).count();
-       return count >= Integer.parseInt(PropertyLoader.loadProperty("answersCountToPass"));
+       return count >= applicationProperties.getAnswersCountToPass();
     }
 
 }

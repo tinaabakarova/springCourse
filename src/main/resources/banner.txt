@@ -1,0 +1,20 @@
+${AnsiColor.GREEN}      *******            ***** **         ***** ***          *****  *      ***** *     **          * ***
+${AnsiColor.GREEN}    *       ***       ******  ****     ******  * **       ******  *     ******  **    **** *     *  ****  *
+${AnsiColor.GREEN}   *         **      **   *  *  ***   **   *  *  **      **   *  *     **   *  * **    ****     *  *  ****
+${AnsiColor.GREEN}   **        *      *    *  *    *** *    *  *   **     *    *  *     *    *  *  **    * *     *  **   **
+${AnsiColor.GREEN}    ***                 *  *      **     *  *    *          *  *          *  *    **   *      *  ***
+${AnsiColor.GREEN}   ** ***              ** **      **    ** **   *          ** **         ** **    **   *     **   **
+${AnsiColor.GREEN}    *** ***            ** **      **    ** **  *           ** **         ** **     **  *     **   **   ***
+${AnsiColor.GREEN}      *** ***        **** **      *     ** ****          **** **         ** **     **  *     **   **  ****  *
+${AnsiColor.GREEN}        *** ***     * *** **     *      ** **  ***      * *** **         ** **      ** *     **   ** *  ****
+${AnsiColor.GREEN}          ** ***       ** *******       ** **    **        ** **         ** **      ** *     **   ***    **
+${AnsiColor.GREEN}           ** **       ** ******        *  **    **   **   ** **         *  **       ***      **  **     *
+${AnsiColor.GREEN}            * *        ** **               *     **  ***   *  *             *        ***       ** *      *
+${AnsiColor.GREEN}  ***        *         ** **           ****      ***  ***    *          ****          **        ***     *
+${AnsiColor.GREEN} *  *********          ** **          *  ****    **    ******          *  *****                  *******
+${AnsiColor.GREEN}*     *****       **   ** **         *    **     *       ***          *     **                     ***
+${AnsiColor.GREEN}*                ***   *  *          *                                *
+${AnsiColor.GREEN} **               ***    *            **                               **
+${AnsiColor.GREEN}                   ******
+${AnsiColor.GREEN}                     ***
+${AnsiColor.DEFAULT}
