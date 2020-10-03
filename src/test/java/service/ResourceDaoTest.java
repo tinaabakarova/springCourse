@@ -4,6 +4,8 @@ import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
+import org.springframework.shell.jline.InteractiveShellApplicationRunner;
+import org.springframework.shell.jline.ScriptShellApplicationRunner;
 import ru.otus.homeworkApp.dao.ResourceDao;
 import ru.otus.homeworkApp.dao.ResourceDaoCsv;
 import utils.PropertyLoader;
@@ -12,8 +14,11 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@SpringBootTest
-public class PersonServiceTest {
+@SpringBootTest(properties = {
+        InteractiveShellApplicationRunner.SPRING_SHELL_INTERACTIVE_ENABLED + "=false",
+        ScriptShellApplicationRunner.SPRING_SHELL_SCRIPT_ENABLED + "=false"
+})
+public class ResourceDaoTest {
     Resource questions;
     Resource answers;
     Resource rightAnswers;
