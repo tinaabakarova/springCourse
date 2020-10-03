@@ -12,8 +12,7 @@ public class ConsoleIoService implements IoService{
     private final PrintStream out;
     private final Scanner sc;
 
-    public ConsoleIoService(@Value("#{ T(java.lang.System).in}") InputStream in,
-                            @Value("#{ T(java.lang.System).out}") PrintStream out) {
+    public ConsoleIoService(InputStream in, PrintStream out) {
         this.out = out;
         this.sc = new Scanner(in);
     }
