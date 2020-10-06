@@ -4,7 +4,7 @@ spring:
       enabled: ALWAYS
 
   profiles:
-    active: RU
+    active: EN
 
 application:
   answersCountToPass: 3
@@ -14,4 +14,4 @@ application:
   questions_RU: classpath:/resourceFiles/questions_RU.csv
   answers_RU: classpath:/resourceFiles/answers_RU.csv
   rightAnswers_RU: classpath:/resourceFiles/rightAnswers_RU.csv
-  locale: RU
+  locale: EN
